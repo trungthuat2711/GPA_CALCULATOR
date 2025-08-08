@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  
+
   background: linear-gradient(
     -45deg,
     #f4f6fb,
@@ -83,7 +83,7 @@ select {
   color: rgb(221, 24, 80);
   margin-top: 16px;
 }
-
+/* Responsive cho mobile */
 @media (max-width: 600px) {
   .container {
     max-width: 98vw;
@@ -95,7 +95,12 @@ select {
   h2 {
     font-size: 1.2em;
   }
-  table, thead, tbody, th, td, tr {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     display: block;
     width: 100%;
   }
@@ -105,7 +110,7 @@ select {
   tr {
     margin-bottom: 12px;
     border-bottom: 1px solid #eee;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
     box-shadow: 0 1px 3px #eee;
     padding: 6px 0;
@@ -123,8 +128,45 @@ select {
     color: #2d3a4b;
     font-size: 0.95em;
   }
-  .add-btn, .calc-btn {
+  .add-btn,
+  .calc-btn {
     font-size: 1em;
     padding: 10px 0;
+    width: 100%;
+  }
+}
+
+/* Responsive cho tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    max-width: 90vw;
+    padding: 18px;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  table {
+    font-size: 0.98em;
+    overflow-x: auto;
+    display: table;
+  }
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: revert;
+    width: revert;
+  }
+  input,
+  select {
+    font-size: 1em;
+    padding: 7px;
+  }
+  .add-btn,
+  .calc-btn {
+    font-size: 1.05em;
+    padding: 10px 0;
+    width: 100%;
   }
 }
