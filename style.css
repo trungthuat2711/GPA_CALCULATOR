@@ -83,3 +83,48 @@ select {
   color: rgb(221, 24, 80);
   margin-top: 16px;
 }
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    background: rgba(255,255,255,0.7);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px #eee;
+    padding: 6px 0;
+  }
+  td {
+    text-align: left;
+    padding: 8px 4px;
+    position: relative;
+  }
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+    color: #2d3a4b;
+    font-size: 0.95em;
+  }
+  .add-btn, .calc-btn {
+    font-size: 1em;
+    padding: 10px 0;
+  }
+}
