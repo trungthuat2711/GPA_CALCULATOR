@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính điểm GPA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tính điểm GPA</h2>
+      <form id="gpaForm" onsubmit="return false;">
+        <table id="subjectsTable">
+          <thead>
+            <tr>
+              <th>Môn học</th>
+              <th>Số tín chỉ</th>
+              <th>Điểm chữ</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" name="subject" required /></td>
+              <td>
+                <input type="number" name="credit" min="1" value="3" required />
+              </td>
+              <td>
+                <select name="grade" required>
+                  <option value="A">A</option>
+                  <option value="B+">B+</option>
+                  <option value="B">B</option>
+                  <option value="C+">C+</option>
+                  <option value="C">C</option>
+                  <option value="D+">D+</option>
+                  <option value="D">D</option>
+                  <option value="F">F</option>
+                </select>
+              </td>
+              <td>
+                <button type="button" onclick="removeRow(this)">X</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="add-btn" type="button" onclick="addRow()">
+          + Thêm môn học
+        </button>
+        <button class="calc-btn" type="button" onclick="calculateGPA()">
+          Tính GPA
+        </button>
+      </form>
+      <div class="result" id="gpaResult"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
